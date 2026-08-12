@@ -1,0 +1,3 @@
+#!/bin/sh
+# Strip Cursor co-author trailer so GitHub does not list cursoragent as contributor.
+sed -i '' '/cursoragent@cursor\.com/d' "$1" 2>/dev/null || sed -i '/cursoragent@cursor\.com/d' "$1"
