@@ -1,0 +1,10 @@
+.venv/
+.venv-docs/
+__pycache__/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+graphify-out/
+uv.lock
+site/

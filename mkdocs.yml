@@ -1,0 +1,108 @@
+site_name: pydd
+site_description: Dump and die for Python web apps — HTML dumps for FastAPI, Flask, and Django
+site_url: https://ardavanshamroshan.github.io/pydd/
+repo_url: https://github.com/ardavanshamroshan/pydd
+repo_name: ardavanshamroshan/pydd
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2026 Ardavan — MIT License
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ardavanshamroshan/pydd
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/pydd-web/
+  alternate:
+    - link: /
+      lang: en
+      name: English
+    - link: /fa/
+      lang: fa
+      name: فارسی
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+          theme:
+            language: en
+          nav:
+            - Home: index.md
+            - Getting Started: getting-started.md
+            - Installation: installation.md
+            - Features: features.md
+            - Frameworks:
+                - FastAPI: frameworks/fastapi.md
+                - Flask: frameworks/flask.md
+                - Django: frameworks/django.md
+            - API Reference: api.md
+            - Demo: demo.md
+            - Upgrade Guide: upgrade.md
+            - Changelog: changelog.md
+        - locale: fa
+          name: فارسی
+          build: true
+          theme:
+            language: fa
+          nav:
+            - خانه: index.md
+            - شروع سریع: getting-started.md
+            - نصب: installation.md
+            - امکانات: features.md
+            - فریم‌ورک‌ها:
+                - FastAPI: frameworks/fastapi.md
+                - Flask: frameworks/flask.md
+                - Django: frameworks/django.md
+            - مرجع API: api.md
+            - دمو: demo.md
+            - راهنمای ارتقا: upgrade.md
+            - تغییرات: changelog.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
