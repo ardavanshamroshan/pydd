@@ -1,0 +1,13 @@
+{#- Modern EN | FA segmented language control -#}
+<div class="md-header__option mint-lang" data-md-component="alternate">
+  <nav class="mint-lang__seg" aria-label="{{ lang.t('select.language') }}">
+    {% for alt in config.extra.alternate %}
+      <a
+        href="{{ alt.link | url }}"
+        hreflang="{{ alt.lang }}"
+        class="mint-lang__btn{% if alt.lang == config.theme.language %} mint-lang__btn--active{% endif %}"
+        title="{{ alt.name }}"
+      >{{ alt.lang | upper }}</a>
+    {% endfor %}
+  </nav>
+</div>

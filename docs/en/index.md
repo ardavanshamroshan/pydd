@@ -4,6 +4,37 @@
 
 Built on **[pydump](https://pypi.org/project/pydump-dd/)** — the terminal dump-and-die core.
 
+<figure class="shot" markdown>
+![pydd HTML dump in the browser](../assets/images/pydd-dd-web-result.jpg)
+<figcaption>Interactive HTML dump — FastAPI / Flask / Django</figcaption>
+</figure>
+
+## Frameworks
+
+Jump to setup for your stack:
+
+<div class="grid cards fw-cards" markdown>
+
+-   [![FastAPI](../assets/logos/fastapi.svg){ .fw-logo }](frameworks/fastapi.md)
+
+    **[FastAPI](frameworks/fastapi.md)**
+
+    Auto-wired on `import pydd`
+
+-   [![Flask](../assets/logos/flask.svg){ .fw-logo }](frameworks/flask.md)
+
+    **[Flask](frameworks/flask.md)**
+
+    `install_flask(app)`
+
+-   [![Django](../assets/logos/django.svg){ .fw-logo }](frameworks/django.md)
+
+    **[Django](frameworks/django.md)**
+
+    `PyddMiddleware`
+
+</div>
+
 <div class="grid cards" markdown>
 
 -   :material-download:{ .lg .middle } **Install**
@@ -53,6 +84,23 @@ def show_post(post_id: int):
 
 Explicit import still works: `from pydd import dd, dump, render_html, render_text`.
 
+## Live preview
+
+<figure class="shot" markdown>
+![Multi-variable HTML dump](../assets/images/pydd-dd-web-result.jpg)
+<figcaption>Multiple vars — labeled panels in the browser</figcaption>
+</figure>
+
+<figure class="shot" markdown>
+![Single dict dump panel](../assets/images/pydd-dd-dict-panel.jpg)
+<figcaption>Typed header, expandable tree, call-site tip</figcaption>
+</figure>
+
+<figure class="shot" markdown>
+![Terminal fallback via pydump](../assets/images/pydump-dd-terminal-result.jpg)
+<figcaption>Outside HTTP — same data via pydump in the terminal</figcaption>
+</figure>
+
 ## What pydd does
 
 | Context | Behavior |
@@ -60,14 +108,6 @@ Explicit import still works: `from pydd import dd, dump, render_html, render_tex
 | Inside an HTTP request | Interactive **HTML** dump → HTTP **500** response |
 | CLI / script / test | **Terminal** dump via pydump → `SystemExit(1)` |
 | `dd(fastapi_app)` at boot | **Arm** HTML on every request; server stays running |
-
-## Supported frameworks
-
-| Framework | Setup |
-|-----------|--------|
-| **FastAPI** | Auto-wired on `import pydd` |
-| **Flask** | `install_flask(app)` |
-| **Django** | `PyddMiddleware` in `MIDDLEWARE` |
 
 ## pydump vs pydd
 

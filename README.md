@@ -1,5 +1,9 @@
 # pydd
 
+<p align="center">
+  <img src="docs/assets/images/logo-mark.png" width="96" alt="pydd" />
+</p>
+
 **Documentation:** [English](https://ardavanshamroshan.github.io/pydd/) · [فارسی](https://ardavanshamroshan.github.io/pydd/fa/)  
 **PyPI:** [pydd-web](https://pypi.org/project/pydd-web/) · **GitHub:** [ardavanshamroshan/pydd](https://github.com/ardavanshamroshan/pydd)
 
@@ -18,31 +22,31 @@ Explicit import still works: `from pydd import dd, dump, render_html, render_tex
 
 ## Preview
 
+<p align="center">
+  <img src="docs/assets/images/pydd-dd-web-result.jpg" width="820" alt="pydd HTML dump in the browser" />
+</p>
+
 ### In a web request (HTML)
 
 Visiting a debug route returns a **500** response with an interactive dark-theme dump:
 
-```text
-dict:4 [▼ // views.py:18
-  "id" => 1
-  "author" => "Jane Doe"
-  "title" => "Hello world"
-  "tags" => list:3 [▶]
-]
-```
+<p align="center">
+  <img src="docs/assets/images/pydd-dd-dict-panel.jpg" width="720" alt="Browser dict dump" />
+</p>
 
-Click `list:3 [▶]` (or the whole header) to expand nested data in the browser.
+<p align="center">
+  <img src="docs/assets/images/pydd-dd-web-result.jpg" width="720" alt="Multiple variable dumps" />
+</p>
+
+Click nested headers to expand data in the browser.
 
 ### Outside a request (terminal)
 
 Same data falls back to **pydump** text on stderr — fully expanded, no collapse:
 
-```text
-dict:4 [
-  "id" => 1
-  ...
-] // script.py:10
-```
+<p align="center">
+  <img src="docs/assets/images/pydump-dd-terminal-result.jpg" width="720" alt="Terminal dump via pydump" />
+</p>
 
 ### Boot-time dump (`dd(app)`)
 

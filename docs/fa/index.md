@@ -4,6 +4,37 @@
 
 بر پایه **[pydump](https://pypi.org/project/pydump-dd/)** — هستهٔ دامپ ترمینال.
 
+<figure class="shot" markdown>
+![دامپ HTML در مرورگر](../assets/images/pydd-dd-web-result.jpg)
+<figcaption>دامپ تعاملی HTML — FastAPI / Flask / Django</figcaption>
+</figure>
+
+## فریم‌ورک‌ها
+
+به بخش راه‌اندازی استک خود بروید:
+
+<div class="grid cards fw-cards" markdown>
+
+-   [![FastAPI](../assets/logos/fastapi.svg){ .fw-logo }](frameworks/fastapi.md)
+
+    **[FastAPI](frameworks/fastapi.md)**
+
+    خودکار با `import pydd`
+
+-   [![Flask](../assets/logos/flask.svg){ .fw-logo }](frameworks/flask.md)
+
+    **[Flask](frameworks/flask.md)**
+
+    `install_flask(app)`
+
+-   [![Django](../assets/logos/django.svg){ .fw-logo }](frameworks/django.md)
+
+    **[Django](frameworks/django.md)**
+
+    `PyddMiddleware`
+
+</div>
+
 <div class="grid cards" markdown>
 
 -   :material-download:{ .lg .middle } **نصب**
@@ -53,6 +84,23 @@ def show_post(post_id: int):
 
 Import صریح هم ممکن است: `from pydd import dd, dump, render_html, render_text`.
 
+## پیش‌نمایش زنده
+
+<figure class="shot" markdown>
+![دامپ چندمتغیره HTML](../assets/images/pydd-dd-web-result.jpg)
+<figcaption>چند متغیر — پنل‌های برچسب‌دار در مرورگر</figcaption>
+</figure>
+
+<figure class="shot" markdown>
+![پنل دامپ dict](../assets/images/pydd-dd-dict-panel.jpg)
+<figcaption>هدر تایپ‌شده، درخت قابل باز شدن، محل فراخوانی</figcaption>
+</figure>
+
+<figure class="shot" markdown>
+![خروجی ترمینال با pydump](../assets/images/pydump-dd-terminal-result.jpg)
+<figcaption>خارج از HTTP — همان داده با pydump در ترمینال</figcaption>
+</figure>
+
 ## pydd چه می‌کند
 
 | زمینه | رفتار |
@@ -60,14 +108,6 @@ Import صریح هم ممکن است: `from pydd import dd, dump, render_html, r
 | داخل درخواست HTTP | دامپ **HTML** تعاملی → پاسخ **500** |
 | CLI / اسکریپت / تست | دامپ **ترمینال** با pydump → `SystemExit(1)` |
 | `dd(fastapi_app)` هنگام boot | **آماده‌سازی** HTML روی هر درخواست؛ سرور زنده می‌ماند |
-
-## فریم‌ورک‌های پشتیبانی‌شده
-
-| فریم‌ورک | راه‌اندازی |
-|----------|-----------|
-| **FastAPI** | خودکار با `import pydd` |
-| **Flask** | `install_flask(app)` |
-| **Django** | `PyddMiddleware` در `MIDDLEWARE` |
 
 ## pydump در مقابل pydd
 
